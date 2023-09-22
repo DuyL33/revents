@@ -4,6 +4,7 @@ import 'semantic-ui-css/semantic.min.css';
 import './app/layout/style.css';
 import App from './app/layout/App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
 
 
 
@@ -11,7 +12,11 @@ import reportWebVitals from './reportWebVitals';
 const rootElelment = document.getElementById('root');
 
 function render() {
-  ReactDOM.render(<App />, rootElelment);
+  ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+  , rootElelment);
 }
 
 if(module.hot){
